@@ -1,0 +1,550 @@
+body{
+  background-color: rgba(32,31,49);
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  color: white;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.navbar{
+    display: flex;
+  background-color: rgba(32,31,49, 0.5);
+    backdrop-filter: blur(10px);
+  border:(3px solid red);
+    width: 100%;
+    height: 58px;
+    text-align: center;
+    line-height: 50px;
+    z-index: 1;
+    position: fixed;   
+}
+/* .img{
+  background-image: url("anime-moon-landscape.jpg");
+  width: 100%;
+  height: 660px;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  top:-52px ; */
+ 
+
+.threeline{
+    width: 53px;
+    color: white;
+    font-size: 26px;
+    /* border-right:1px solid white; */
+    line-height: 70px;
+    font-weight: bolder;
+    cursor: pointer;
+}
+.threeline:hover{
+    transform: translate(0, -5px);
+}
+.logo{
+    display: flex;
+    width: 600px;
+    gap: 17px;
+    justify-content: center;
+    /* border-right: 1px solid white; */
+}
+#header1{
+    display: flex;
+    font-size: 40px;
+    align-items: center;
+    font-weight: bolder;
+    margin-top: 5.3px;
+    cursor: pointer;
+}
+#header1:hover{
+   transform: translate(0, -5px);
+}
+#letter1{
+    color: rgb(222, 158, 179);
+   
+}
+#search{
+    width: 360px;
+    height: 45px;
+    border-radius: 14px;
+    background-color: rgba(245, 245, 245, 0.932);
+    border: none;
+    padding-left: 15px;
+    color: black;
+    margin-top: 5.2px;
+}
+#search:focus{
+    outline: none;
+    box-shadow: 0 0  5px 7px rgba(190, 68, 109, 0.5) inset;
+   
+}
+#icon1{
+    color: black;
+    font-size: 18px;
+    font-weight: bolder;
+    cursor: pointer;
+    position: absolute;
+    left: 590px;
+    top: 5px;
+}
+#icon1:hover{
+    transform: translate(0, -5px);
+}
+.share{
+    display: flex;
+    
+    width: 250px;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+
+    /* border-right: 1px solid white; */
+}
+.circle1, .circle2, .circle3, .circle4{
+    width: 37px;
+    height: 37px;
+    border-radius: 50%;
+    background-color: white;
+    cursor: pointer;
+    overflow: hidden;
+    /* object-fit: cover; */
+    /* object-position: center top; */
+
+}
+.circle1 img, .circle2 img, .circle3 img, .circle4 img{
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+}
+.circle1:hover, .circle2:hover, .circle3:hover, .circle4:hover{
+    transform: translate(0, -5px);
+}
+.circle1 img{
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+}
+.circle2 img{
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+}
+
+.cart{
+    display: flex;
+    width: 450px;
+    justify-content: center;
+    align-items: center;
+    /* border-right: 1px solid white; */
+    gap: 28px;
+    font-size: 28px;
+    font-weight: bolder;
+
+}
+.langbox{
+    height: 25px;
+    width: 60px;
+    border-radius: 10px;
+    
+    display: flex;
+   background: linear-gradient(to right, rgb(222, 158, 179) 50%, rgb(98, 98, 98) 50%);
+  
+}
+.box1{
+    width: 30px;
+  font-size: 13px;  
+    height: 25px;
+
+    color: black;
+  
+display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+.box2{
+    
+    width: 30px;
+    font-size: 13px;
+    height: 25px;
+      
+display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+.box1:hover, .box2:hover{
+    transform: translate(0, -5px);
+}
+#news, #community, #router, #random{
+    color:  rgb(220, 167, 185);
+    font-size: 25px;
+    cursor: pointer;
+    margin-left: 10px;
+}
+#news:hover, #community:hover, #router:hover, #random:hover{
+    transform: translate(0, -5px);
+}
+.login{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+.loginbox{
+    display: flex;
+    width: 90px;
+    height: 35px;
+    border-radius: 10px;
+    color: black;
+    background-color: rgb(220, 167, 185);
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+    cursor: pointer;
+    margin-left: 40px;
+}
+.loginbox:hover{
+    transform: translate(0, -5px);
+}
+
+
+.transitionslide {
+  position: relative;
+  width: 100%;
+  height: 660px;
+  top: -52px; 
+  overflow: hidden;
+  z-index: 0;
+}
+
+.slide {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+  opacity: 0;
+  animation: hero 50s infinite;
+}
+
+.slide1  { background-image: url("anime-moon-landscape.jpg");  animation-delay: 0s; }
+.slide2  { background-image: url("mythical-dragon-beast-anime-style.jpg");  animation-delay: 5s; }
+.slide3  { background-image: url("illustration-anime-city.jpg");  animation-delay: 10s; }
+.slide4  { background-image: url("anime-eyes-illustration.jpg");  animation-delay: 15s; }
+.slide5  { background-image: url("fantasy-magic-landscape.jpg");  animation-delay: 20s; }
+.slide6  { background-image: url("anime-moon-landscape\ \(1\).jpg");  animation-delay: 25s; }
+.slide7  { background-image: url("illustration-anime-city\ \(1\).jpg");  animation-delay: 30s; }
+.slide8  { background-image: url("medium-shot-anime-characters-hugging.jpg");  animation-delay: 35s; }
+.slide9  { background-image: url("anime-style-scene-with-people-showing-affection-outdoors-street.jpg");  animation-delay: 40s; }
+.slide10 { background-image: url("anime-moon-landscape\ \(2\).jpg"); animation-delay: 45s; }
+
+@keyframes hero {
+  0%   { opacity: 0; }
+  10%  { opacity: 1; }
+  20%  { opacity: 1; }
+  30%  { opacity: 0; }
+  100% { opacity: 0; }
+}
+
+
+.marquee {
+  width: 100%;
+  overflow: hidden;
+  white-space: nowrap;
+  box-sizing: border-box;
+}
+
+.marquee span {
+  display: inline-block;
+      color: rgb(215, 158, 177);
+    font-size: 30px;
+    font-weight: bolder;
+  padding-left: 100%;
+  animation: scroll-left 8s linear infinite;
+}
+
+@keyframes scroll-left {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+.marquee span:hover {
+  animation-play-state: paused;
+    color: rgb(255, 255, 255);
+}
+
+.trending-container {
+  position: relative;
+  margin-top: 60px;
+  overflow: hidden;
+  padding: 20px;
+  background-color: rgba(32, 31, 49, 0.7);
+  /* backdrop-filter: blur(8px); */
+}
+
+.trending-line {
+  display: flex;
+  gap: 20px;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  padding-bottom: 20px;
+}
+
+.carousel-item {
+  display: flex;
+  /* flex-direction: row; */
+  align-items: center;
+  /* position: relative; */
+}
+
+.vertical-name {
+  writing-mode: vertical-rl;
+  
+  text-orientation: mixed;
+  color: white;
+  font-size: 18px;
+  font-weight: bold;
+  margin-right: 10px;
+}
+
+.img-box {
+  width: 300px;
+  height: 300px;
+  background-size: cover;
+  background-position: center;
+  border-radius: 12px;
+  position: relative;
+  transition: transform 0.3s ease;
+}
+
+.img-box:hover {
+  transform: scale(1.05);
+}
+
+.hover-content {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 200px;
+  padding: 12px;
+  background: rgba(0, 0, 0, 0.6);
+  color: white;
+  font-size: 14px;
+  display: none;
+  /* border-radius: 0 0 12px 12px; */
+  /* background-size: cover; */
+}
+
+.img-box:hover .hover-content {
+  display: block;
+}
+
+/* .arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(255, 255, 255, 0.2);
+  border: none;
+  color: white;
+  font-size: 28px;
+  cursor: pointer;
+  padding: 10px;
+  z-index: 10;
+  border-radius: 50%;
+} */
+
+/* .arrow.left {
+  left: 10px;
+
+}
+
+.arrow.right {
+  right: 10px;
+} */
+
+.trending-line::-webkit-scrollbar {
+  display: none; /* Hide scrollbar */
+}
+
+.anime-section {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 30px 50px;
+  /* gap: px; */
+  align-items: flex-start;
+  background-color: #1e1e2f; /* moved from body */
+  font-family: Arial, sans-serif; /* moved from body */
+  color: white; /* moved from body */
+    background-color: rgba(255, 255, 255, 0.05);
+  
+}
+
+/* Anime girl image */
+.anime-girl {
+  width: 350px;
+  height: 350px;
+  background-image: url("cute\ girl.png"); /* Replace with your image */
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  border-radius: 15px;
+  transition: transform 0.3s ease;
+  
+}
+
+.anime-girl:hover {
+  transform: scale(1.05);
+}
+
+/* Each content box */
+.anime-box {
+  /* background-color: rgba(255, 255, 255, 0.05); */
+  padding: 20px  10px;
+  border-radius: 12px;
+  width: 200px;
+  height: 350px;
+  margin-top: -38px;
+  flex: 1
+}
+
+.anime-box h2 {
+  margin-bottom: 15px;
+  color: #ffb6c1;
+  text-align: center;
+}
+
+/* Individual anime entries */
+.anime-entry {
+  margin-bottom: 15px;
+  text-align: center;
+  /* transition: transform 0.3s ease; */
+}
+
+.anime-entry img {
+  width: 80px;
+  height: 65px;
+  border-radius: 10px;
+  object-fit: cover;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.anime-entry:hover img {
+  transform: scale(1.05);
+  box-shadow: 0 0 15px rgba(255, 255, 255, 0.3);
+}
+
+.anime-entry p {
+  margin-top: 8px;
+  font-size: 14px;
+}
+
+.footer {
+  background-color: #1e1d2b;
+  color: #ccc;
+  padding: 30px 60px;
+  font-family: sans-serif;
+  margin-top: 50px;
+}
+
+.az-section h3 {
+  color: #fff;
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+.az-section h3 span {
+  font-weight: normal;
+  font-size: 14px;
+  margin-left: 10px;
+  color: #aaa;
+}
+
+.az-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin: 10px 0 25px;
+}
+
+.az-links span {
+  background: #2d2b3a;
+  padding: 6px 10px;
+  border-radius: 6px;
+  color: #fff;
+  font-size: 14px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.az-links span:hover {
+  background: #444;
+}
+
+.footer-links {
+  margin-bottom: 15px;
+}
+
+.footer-links a {
+  color: #dcdcdc;
+  text-decoration: none;
+  margin-right: 20px;
+  font-size: 14px;
+}
+
+.footer-links a:hover {
+  text-decoration: underline;
+}
+
+.disclaimer p {
+  font-size: 13px;
+  color: #888;
+  margin: 5px 0;
+}
+/* Container that holds Anya */
+.anya-container {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  width: 90px;
+  height: auto;
+  z-index: 9999;
+  animation: slideIn 1s ease forwards;
+  animation-delay: 3s;
+  opacity: 0;
+  cursor: pointer;
+}
+
+/* The default Anya image */
+.anya-img {
+  width: 100%;
+  height: auto;
+  transition: all 0.3s ease;
+}
+
+/* Slide-in animation from right with delay */
+@keyframes slideIn {
+  0% {
+    transform: translateX(50px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+/* Hover effect: falling Anya */
+.anya-container:hover .anya-img {
+  content: url('anyafalling.png');
+}
+
+/* Click effect: change to Anya pointing up */
+/* #anya-click:target + .anya-container .anya-img { */
+  /* content: url('anyaup.png'); */
+/* } */
